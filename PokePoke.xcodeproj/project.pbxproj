@@ -14,6 +14,7 @@
 		F66254831F3A67FA00A28B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66254821F3A67FA00A28B0A /* Assets.xcassets */; };
 		F66254861F3A67FA00A28B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66254841F3A67FA00A28B0A /* LaunchScreen.storyboard */; };
 		F662548F1F3A6B4C00A28B0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F662548E1F3A6B4C00A28B0A /* MapKit.framework */; };
+		F699CD251F3BE0CE005203B2 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699CD241F3BE0CE005203B2 /* PokedexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F66254851F3A67FA00A28B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F66254871F3A67FA00A28B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F662548E1F3A6B4C00A28B0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F699CD241F3BE0CE005203B2 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				F66254781F3A67FA00A28B0A /* AppDelegate.swift */,
 				F662547A1F3A67FA00A28B0A /* ViewController.swift */,
+				F699CD241F3BE0CE005203B2 /* PokedexViewController.swift */,
 				F662547C1F3A67FA00A28B0A /* Main.storyboard */,
 				F66254821F3A67FA00A28B0A /* Assets.xcassets */,
 				F66254841F3A67FA00A28B0A /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F662547B1F3A67FA00A28B0A /* ViewController.swift in Sources */,
+				F699CD251F3BE0CE005203B2 /* PokedexViewController.swift in Sources */,
 				F66254791F3A67FA00A28B0A /* AppDelegate.swift in Sources */,
 				F66254811F3A67FA00A28B0A /* PokePoke.xcdatamodeld in Sources */,
 			);
@@ -320,6 +324,7 @@
 				F662548C1F3A67FA00A28B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
