@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -18,20 +18,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var manager = CLLocationManager()
     
     var pokemons : [Pokemon] = []
-
+    
+    var mapView = MKMapView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pokemons = getAllPokemon()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
         manager.delegate = self
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
-            print("Ready for ya")
-            mapView.showsUserLocation = true
             
+            mapView.delegate = self
+            mapView.showsUserLocation = true
             manager.startUpdatingLocation()
             
             Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
@@ -52,6 +53,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {     manager.requestWhenInUseAuthorization()
 
             
+        }
+        
+        func mapView(mapView: MKMapView, viewFor: MKAnnotation) -> MKAnnotationView? {
+            
+            let annoView = MKAnnotationView(annotation: MKAnnotation.self as? MKAnnotation, reuseIdentifier: nil)
+            
+            annoView.image = UIImage(named: "mew")
+            
+            return annoView
         }
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations: [CLLocation]){
